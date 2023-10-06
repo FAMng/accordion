@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Manjari' ,sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #141E46;
+}
+.accordion{
+    margin: 100px auto;
+    width: 600px;
+}
+.accordion__li{
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #FFF;
+    padding: 10px;
+    border-radius: 5px;
+}
+.accordion__lable{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #FF6969;
+}
+.accordion__lable-span{
+    transform: rotate(90deg);
+    font-size: 24px;
+}
+.accordion label + input[type="radio"]{
+    display: none;
+}
+.content{
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+}
+.accordion label + input[type="radio"]:checked + .content{
+    max-height: 600px ;
+    transition: max-height 1s;
+}
